@@ -17,4 +17,14 @@ class BookController extends Controller
         return response()->json($books->toArray(), Response::HTTP_OK);
 
     }
+
+//    public function store(Request $request)
+//    {
+//        $request->validate(
+//            [
+//                'title' =>
+//
+//            ]
+//        );
+//    }
 }
