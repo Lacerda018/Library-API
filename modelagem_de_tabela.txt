@@ -1,0 +1,23 @@
+tabela de usuarios:
+- nome
+- sobrenome
+- email
+- senha
+
+tabela de livros:
+- titulo
+- autor
+- ano
+- genero
+
+tabela usuario_livro:
+- usuario_id(referencia ao ID da tabela 'usuarios')
+- livro_id(referencia ao ID da tabela 'livros')
+
+tabela de aluguel de livro:
+- usuario_id(referencia ao ID da tabela 'usuarios')
+- livro_id(referencia ao ID da tabela 'livros')
+- alugado_em (data de saida)
+- devolvido_em (data da devoluçao)
+
+//(referencia o usuario e do livro, "qual") (data "quando pegou" data "quando devolveu" timestamp)
