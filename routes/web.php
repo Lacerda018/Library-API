@@ -16,5 +16,13 @@ Route::patch('/users/{user}', [UserController::class, 'update']);
 Route::delete('/users/{user}', [UserController::class, 'delete']);
 
 // --------- book ---------
-Route::get('/book_index', [BookController::class, 'index']);
+Route::get('/bookIndex', [BookController::class, 'index']);
+
+Route::post('/books', [BookController::class, 'store']);
+
+Route::get('/books/{book}', [BookController::class, 'show']);
+
+Route::patch('/books/{book}', [BookController::class, 'update']);
+
+Route::delete('/books/{book}', [BookController::class, 'delete']);
 
