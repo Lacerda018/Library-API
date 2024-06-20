@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
+use \App\Http\Controllers\BookRentalController;
 
 // --------- user ---------
-Route::get('/user_index', [UserController::class, 'index']);
+Route::get('/userIndex', [UserController::class, 'index']);
 
 Route::post('/users', [UserController::class, 'store']);
 
@@ -26,3 +27,13 @@ Route::patch('/books/{book}', [BookController::class, 'update']);
 
 Route::delete('/books/{book}', [BookController::class, 'delete']);
 
+// --------- book rental ---------
+Route::get('/bookRentalIndex', [BookRentalController::class, 'index']);
+
+Route::get('/bookRentals/{bookRental}', [BookRentalController::class, 'show']);
+
+Route::post('/bookRentals', [BookRentalController::class, 'store']);
+
+Route::patch('/bookRentals/{bookRental}', [BookRentalController::class, 'update']);
+
+Route::delete('/bookRentals/{bookRental}', [BookRentalController::class, 'delete']);
